@@ -13,17 +13,16 @@ groupadd tomcat
 useradd -g tomcat -d /opt/tomcat -s /bin/nologin tomcat
 
 #Download apache tomcat
-wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
-wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
-wget --no-check-certificate https://www.apache.org/dist/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz.md5
-cat apache-tomcat-8.5.24.tar.gz.md5
+wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
+wget --no-check-certificate http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz.md5
+cat apache-tomcat-8.5.27.tar.gz.md5
 
 #md5sum verification
-md5sum apache-tomcat-8.5.24.tar.gz
+md5sum apache-tomcat-8.5.27.tar.gz
 tar -zxvf apache-tomcat-*.tar.gz
 
 #Moving apache files to standard directory
-mv apache-tomcat-8.5.24/* /opt/tomcat/
+mv apache-tomcat-8.5.*/* /opt/tomcat/
 
 #Providing privilages to tomcat directory
 chown -R tomcat:tomcat /opt/tomcat/
