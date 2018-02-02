@@ -68,10 +68,5 @@ sed -i '$i<user username="admin" password="tomcat" roles="manager-gui,admin-gui"
 sh /opt/tomcat/bin/shutdown.sh
 sh /opt/tomcat/bin/startup.sh
 
-#Jenkins Installtion
-wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
-rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
-yum install -y jenkins
-
 #Get port 8080 status
 netstat -antup | grep 8080
